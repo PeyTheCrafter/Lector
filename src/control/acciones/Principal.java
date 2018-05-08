@@ -1,6 +1,8 @@
 package control.acciones;
 
 import java.awt.EventQueue;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
 
 import vista.UI;
 

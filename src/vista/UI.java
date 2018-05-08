@@ -1,8 +1,6 @@
 package vista;
 
 import java.awt.BorderLayout;
-import java.awt.EventQueue;
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
@@ -12,9 +10,6 @@ import java.awt.Insets;
 import javax.swing.JButton;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
-import java.awt.event.KeyAdapter;
-import java.awt.event.KeyEvent;
-import javax.swing.JTextPane;
 
 public class UI extends JFrame {
 
@@ -34,7 +29,7 @@ public class UI extends JFrame {
 	public UI() {
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 600);
+		setBounds(300, 300, 450, 600);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(10, 10, 10, 10));
 		setContentPane(contentPane);
@@ -55,7 +50,6 @@ public class UI extends JFrame {
 		panelPantalla.setLayout(new BorderLayout(0, 0));
 
 		txtLector = new JTextArea();
-		txtLector.setInheritsPopupMenu(true);
 		txtLector.setLineWrap(true);
 		txtLector.setWrapStyleWord(true);
 		panelPantalla.add(txtLector, BorderLayout.CENTER);
