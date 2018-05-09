@@ -1,8 +1,7 @@
 # Lector
 <img src="https://i.imgur.com/mE5sfSj.png"></img>
-<br>
 <img src="https://i.imgur.com/KlvNp4H.png"></img>
-<br>
+
 ## Secuencia Normal
   - **Avanzar página:** carga y muestra la siguiente página.
   - **Retroceder página:** carga y muestra la página anterior.
