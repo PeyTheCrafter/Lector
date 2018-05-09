@@ -14,8 +14,8 @@ public class GestorLibro {
 		this.ruta = ruta;
 	}
 
-	public String getString() {
-		String str = "";
+	public String getTexto() {
+		StringBuilder str = new StringBuilder();
 		File archivo = new File(this.ruta);
 		FileInputStream flujoR = null;
 		BufferedInputStream bufferR = null;
@@ -25,7 +25,7 @@ public class GestorLibro {
 				bufferR = new BufferedInputStream(flujoR);
 				int ch = bufferR.read();
 				while (ch != -1) {
-					str.concat(String.valueOf(Character.toChars(ch)));
+					str.append(String.valueOf(Character.toChars(ch)));
 					ch = bufferR.read();
 				}
 			} catch (FileNotFoundException e) {
@@ -43,7 +43,7 @@ public class GestorLibro {
 				e.printStackTrace();
 			}
 		}
-		return str;
+		return str.toString();
 	}
 
 	public String getRuta() {

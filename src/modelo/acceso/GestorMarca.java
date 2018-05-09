@@ -13,7 +13,7 @@ public class GestorMarca {
 
 	public GestorMarca() {
 		super();
-		this.ruta = "src/modelo/marca.mar";
+		this.ruta = "src/modelo/marca.mrk";
 	}
 
 	public void guardar(int v) {
@@ -41,10 +41,18 @@ public class GestorMarca {
 	}
 
 	public int cargar() {
-		int v = -1;
+		int v = 0;
 		File archivo = new File(this.ruta);
 		FileInputStream flujoR = null;
 		DataInputStream conversorR = null;
+		if(!archivo.exists()) {
+			try {
+				archivo.createNewFile();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
 		try {
 			flujoR = new FileInputStream(archivo);
 			conversorR = new DataInputStream(flujoR);

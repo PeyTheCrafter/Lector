@@ -4,7 +4,7 @@ public class Pagina {
 	private long primer;
 	private long ultimo;
 
-	public Pagina(int numero, long primer, long ultimo) {
+	public Pagina(long primer, long ultimo) {
 		super();
 		this.primer = primer;
 		this.ultimo = ultimo;
