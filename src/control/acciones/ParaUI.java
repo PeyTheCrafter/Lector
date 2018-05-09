@@ -1,5 +1,9 @@
 package control.acciones;
 
+import control.listeners.MALAvanzar;
+import control.listeners.MALIrAMarca;
+import control.listeners.MALMarcar;
+import control.listeners.MALRetroceder;
 import modelo.Libro;
 import modelo.Pagina;
 import modelo.acceso.GestorLibro;

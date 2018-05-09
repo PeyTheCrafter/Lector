@@ -1,7 +1,9 @@
-package control.acciones;
+package control.listeners;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
+import control.acciones.ParaUI;
 
 public class MALMarcar implements ActionListener{
 	
