@@ -2,18 +2,21 @@ package modelo;
 
 import java.util.ArrayList;
 
+import modelo.acceso.GestorMarca;
+
 public class Libro implements Legible {
 	private String lectura;
-	private String texto;
 
 	private int actual = 0;
 	private int marca = 0;
+	private int incremento;
 	private ArrayList<Pagina> paginas;
 
 	public Libro() {
 		super();
 		lectura = "src/modelo/txt.txt";
 		paginas = new ArrayList<>();
+		irAMarca();
 	}
 
 	@Override
@@ -30,7 +33,7 @@ public class Libro implements Legible {
 	}
 
 	private boolean cargarSiguientePagina() {
-		return this.paginas.get(this.actual + 1).getUltimo() == this.texto.length() - 1;
+		return true;
 	}
 
 	@Override
@@ -41,14 +44,14 @@ public class Libro implements Legible {
 
 	@Override
 	public void marcarPagina() {
-		// TODO Auto-generated method stub
-
+		new GestorMarca().guardar(this.actual);
 	}
 
 	@Override
 	public void irAMarca() {
-		// TODO Auto-generated method stub
-
+		if (this.marca != 0) {
+			this.actual = new GestorMarca().cargar();
+		}
 	}
 
 	public String getLectura() {
@@ -66,13 +69,9 @@ public class Libro implements Legible {
 	public ArrayList<Pagina> getPaginas() {
 		return paginas;
 	}
-	
-	public String getTexto() {
-		return texto;
-	}
 
-	public void setTexto(String texto) {
-		this.texto = texto;
+	public void setIncremento(int incremento) {
+		this.incremento = incremento;
 	}
 
 }

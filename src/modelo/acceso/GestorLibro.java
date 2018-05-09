@@ -6,10 +6,10 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-public class Gestor {
+public class GestorLibro {
 	private String ruta;
 
-	public Gestor(String ruta) {
+	public GestorLibro(String ruta) {
 		super();
 		this.ruta = ruta;
 	}
