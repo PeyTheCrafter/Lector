@@ -16,6 +16,12 @@ public class GestorMarca {
 		this.ruta = "src/modelo/marca.mrk";
 	}
 
+	/**
+	 * Almacena el número de la página guardada en un archivo.
+	 * 
+	 * @param v
+	 *            el índice a guardar.
+	 */
 	public void guardar(int v) {
 		File archivo = new File(this.ruta);
 		FileOutputStream flujoW = null;
@@ -40,12 +46,20 @@ public class GestorMarca {
 		}
 	}
 
+	/**
+	 * Carga el número de la página marcada anteriormente guardada. En caso de estar
+	 * vacío, arroja una excepción que no afecta al funcionamiento normal del
+	 * programa.
+	 * 
+	 * @return el valor almacenado. 0 si no había nada guardado (correspondiente a
+	 *         la primera página).
+	 */
 	public int cargar() {
 		int v = 0;
 		File archivo = new File(this.ruta);
 		FileInputStream flujoR = null;
 		DataInputStream conversorR = null;
-		if(!archivo.exists()) {
+		if (!archivo.exists()) {
 			try {
 				archivo.createNewFile();
 			} catch (IOException e) {

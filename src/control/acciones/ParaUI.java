@@ -33,6 +33,10 @@ public class ParaUI extends UI {
 		actualizarVentana();
 	}
 
+	/**
+	 * Actualiza el texto de la pantalla. Para ello selecciona con substring el
+	 * rango de texto obtenido por el gestor y lo muestra en pantalla.
+	 */
 	public void actualizarVentana() {
 		Pagina pagina = this.libro.getPaginas().get(this.libro.getPaginas().size() - 1);
 		System.out.println(pagina.getPrimer() + " " + pagina.getUltimo());

@@ -14,6 +14,10 @@ public class GestorLibro {
 		this.ruta = ruta;
 	}
 
+	/**
+	 * Obtiene el texto del archivo.
+	 * @return el texto del archivo.
+	 */
 	public String getTexto() {
 		StringBuilder str = new StringBuilder();
 		File archivo = new File(this.ruta);
