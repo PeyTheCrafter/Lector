@@ -14,7 +14,7 @@ public class Libro implements Legible {
 
 	public Libro() {
 		super();
-		lectura = "src/modelo/txt.txt";
+		lectura = "src/datos/txt.txt";
 		paginas = new ArrayList<>();
 	}
 

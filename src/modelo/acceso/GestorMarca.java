@@ -13,7 +13,7 @@ public class GestorMarca {
 
 	public GestorMarca() {
 		super();
-		this.ruta = "src/modelo/marca.mrk";
+		this.ruta = "src/datos/marca.mrk";
 	}
 
 	/**
